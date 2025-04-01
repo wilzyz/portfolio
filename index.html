@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Wilner | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+  html {
+  scroll-behavior: smooth;
+}
+
+  .social-media-icons {
+      display: none;
+      transition: transform 0.5s ease;
+    }
+</style>
+</head>
+<body class="font-sans bg-transparent text-gray-900">
+  <!-- Left Sticky Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 h-full sm:w-[6%] md:w-[6%] lg:w-[6%] bg-black text-white flex flex-col items-center z-50 py-8" data-aos="slide-right" data-aos-duration="500">
+    <!-- Navbar Brand -->
+    <div class="text-2xl font-semibold text-center mb-8" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="300">
+      <a href="/" class="text-white hover:text-white text-gray-600 transition-colors"><img src="Photos/navbar-brand.png" width="50" alt=""></a>
+    </div>
+  
+    <!-- Navbar Links with Tooltips -->
+    <div class="flex flex-col items-center pt-8">
+      <!-- About Tooltip -->
+      <div class="group relative mb-6" data-aos="fade-down" data-aos-delay="800" data-aos-duration="100">
+        <a href="#about" class="text-2xl hover:text-white text-gray-600 text-gray-600 transition-colors">
+          <i class="fa-solid fa-address-card"></i>
+        </a>
+        <span class="absolute translate-x-[25%] opacity-0 group-hover:opacity-100 text-sm text-white bg-black py-1 px-2 rounded transition-opacity z-10 transition-all duration-500 ease-in-out">About_Me</span>
+      </div>
+  
+      <!-- Skills Tooltip -->
+      <div class="group relative mb-6" data-aos="fade-down" data-aos-delay="900" data-aos-duration="100">
+        <a href="#skills" class="text-2xl hover:text-white text-gray-600 transition-colors">
+          <i class="fa-solid fa-gears"></i>
+        </a>
+        <span class="absolute translate-x-[40%] opacity-0 group-hover:opacity-100 text-sm text-white bg-black py-1 px-2 rounded transition-opacity transition-all duration-500 ease-in-out">Skills</span>
+      </div>
+  
+      <!-- Experience Tooltip -->
+      <div class="group relative mb-6" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="100">
+        <a href="#experiences" class="text-2xl hover:text-white text-gray-600 transition-colors">
+          <i class="fa-solid fa-clipboard-list"></i>
+        </a>
+        <span class="absolute translate-x-[25%] opacity-0 group-hover:opacity-100 text-sm text-white bg-black py-1 px-2">Experience</span>
+      </div>
+  
+      <!-- Projects Tooltip -->
+      <div class="group relative mb-6" data-aos="fade-down" data-aos-delay="1100" data-aos-duration="100">
+        <a href="#projects" class="text-2xl hover:text-white text-gray-600 transition-colors">
+          <i class="fa-solid fa-laptop-code"></i>
+        </a>
+        <span class="absolute translate-x-[25%] opacity-0 group-hover:opacity-100 text-sm text-white bg-black py-1 px-2 rounded transition-opacity transition-all duration-500 ease-in-out">Projects</span>
+      </div>
+  
+      <!-- Contact Tooltip -->
+      <div class="group relative mb-6" data-aos="fade-down" data-aos-delay="1200" data-aos-duration="200">
+        <a href="#contact" class="text-2xl hover:text-white text-gray-600 transition-colors">
+          <i class="fa-solid fa-envelope-open-text"></i>
+        </a>
+        <span class="absolute translate-x-[35%] opacity-0 group-hover:opacity-100 text-sm text-white bg-black py-1 px-2 rounded transition-opacity transition-all duration-500 ease-in-out">Contact</span>
+      </div>
+    </div>
+  
+    <!-- Social Media Icons (Initially Hidden) -->
+    <div id="socialMediaIcons" class="social-media-icons hidden absolute bottom-2 left-16 bg-black rounded px-4 py-3 space-y-3 flex flex-col items-center">
+      <a href="#" class="text-gray-600 hover:text-white text-2xl"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#" class="text-gray-600 hover:text-white text-2xl"><i class="fa-brands fa-facebook-messenger"></i></a>
+      <a href="#" class="text-gray-600 hover:text-white text-2xl"><i class="fa-brands fa-viber"></i></a>
+      <a href="#" class="text-gray-600 hover:text-white text-2xl"><i class="fa-brands fa-telegram"></i></a>
+      <a href="#" class="text-gray-600 hover:text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+    </div>
+  
+    <!-- Arrow Icon to Toggle Social Media Visibility -->
+    <button id="arrowContainer" class="absolute bottom-4 left-0 right-0 text-center" title="Show Social Media">
+      <i id="arrowIcon" class="fa-solid fa-eye-slash text-lg text-gray-600 cursor-pointer hover:text-white"></i>
+    </button>
+  </nav>
+<div class="pl-8">
+<!-- Main Content (Rest of the page) -->
+<section class="hero text-white h-screen flex items-center justify-center">
+  <div class="flex items-center justify-center space-x-12 sm:px-4 md:px-8 lg:px-16 xl:px-[200px]">
+    <!-- Image with Circle Effect -->
+    <div class="flex justify-center drop-shadow-2xl relative">
+      <img src="Photos/pic1.jpg" alt="Wilner" class="rounded-full border-[15px] border-gray-300" data-aos="zoom-in" data-aos-duration="500" width="2500" height="300">
+    </div>
+    <!-- Text -->
+    <div class="text-start">
+      <p class="text-[5vw] font-bold mb-[-20px] text-gray-800" data-aos="fade-left" data-aos-duration="500">Greetings!</p>
+      <p class="text-[3vw] font-bold mb-2 text-gray-800" data-aos="fade-left" data-aos-duration="500" data-aos-delay="400">you can call me Wilner</p>
+      <p class="sm:text-[1.5vw] text-gray-500 text-justify" data-aos="fade-left" data-aos-duration="500" data-aos-delay="600">A passionate full-stack developer, constantly learning and exploring new technologies to create innovative, user-friendly websites. Focused on building solutions that not only meet but exceed clients' expectations, ensuring seamless and engaging online experiences. Staying up-to-date with industry trends, striving to consistently produce high-quality work that aligns with both user needs and business objectives.</p>
+    </div>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 px-6 text-center bg-gray-200">
+    <div class="flex items-center justify-center space-x-12 sm:px-6 md:px-8 lg:px-16 xl:px-[200px]">
+      <!-- Image with Circle Effect -->
+      <div class="flex justify-center drop-shadow-2xl relative" data-aos="fade-right" data-aos-duration="500">
+        <p class="text-[6vw] text-end font-bold">About Me</p>
+      </div>
+      <!-- Text -->
+      <div class="text-start" data-aos="fade-left" data-aos-duration="500">
+        <p class="text-[1.2vw] text-justify text-gray-600 mb-4">
+          Driven by a deep passion for web development, I am a self-taught developer with a proven track record of delivering high-quality websites. I have successfully completed freelance projects for small businesses, honing my skills in HTML, CSS, JavaScript, and PHP, while utilizing MySQL for backend development. One of my key projects involved building a dynamic e-commerce platform for a small business, where I focused on delivering an intuitive user experience and seamless functionality. My commitment to continuous learning and passion for coding allows me to approach every project with creativity and precision.
+        </p>
+        <p class="text-[1.2vw] text-justify text-gray-600 mb-4">
+          I've always been fascinated by technology and how it shapes the world. Since I was a child, I dreamed of being a developer, but I didn't know what kind of developer. As I grew older, I decided to become a web developer because it allows me to create websites from the comfort of my home. It also lets me be more creative, both in designing and building interactions on the front-end and back-end.
+        </p>
+        <p class="text-[1.2vw] text-justify text-gray-600 mb-4">
+          Every project given to me fuels my passion for exploring new methods and programming languages to grow further in web development. For me, every challenge in web development helps me grow and improve my skills.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-16 bg-gray-50 px-16 text-">
+    <h2 class="text-3xl sm:text-4xl text-center font-bold text-gray-600 mb-8" data-aos="fade-down" data-aos-duration="500">Skills</h2>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:px-1 md:px-8 lg:px-16 xl:px-[200px]">
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700">
+        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="600">HTML, CSS & JavaScript</h4>
+        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="600">Experienced in front-end web development using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="200">
+        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="700">Python</h4>
+        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="700">Experienced in developing software, applications, and websites (using Flask) with Python.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="300">
+        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="800">Bootstrap & Tailwind</h4>
+        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="800">Proficient in using Bootstrap for a more convenient CSS framework, but transitioned to Tailwind for greater flexibility in HTML design.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="400">
+        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="900">Problem Solving</h4>
+        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="900">Skilled in identifying and resolving complex issues by understanding client needs and applying effective solutions. Experienced in troubleshooting technical problems and optimizing processes for better results.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="500">
+        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="1000">Time Management & Multitasking</h4>
+        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="1000">Experienced in managing multiple projects simultaneously, with strong time management and multitasking skills to ensure timely project completion.</p>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="600">
+        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="1100">PHP & MySQL</h4>
+        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="1100">Extensive experience in backend development with PHP, paired with MySQL for database management.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Experience Section -->
+  <section id="experiences" class="py-16 px-6 text-center bg-gray-200 lg:h-dvh md:h-[150vh] sm:h-[300vh]">
+    <h2 class="text-3xl sm:text-4xl font-bold text-gray-600 mb-8" data-aos="fade-down">Experience</h2>
+    <div class="flex items-center justify-center space-x-12 sm:px-4 md:px-8 lg:px-16 xl:px-[100px]">
+      <div>
+        <ul class="list-disc text-left mx-auto max-w-2xl text-gray-700">
+          <p class="text-2xl font-bold" data-aos="fade-up" data-aos-duration="200">PSALMS PRINTING SHOP</p>
+          <p class="text-sm mb-4" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">Computer Store attendant (2019-2023)</p>
+          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="400">
+            <p>Diagnosed and resolved hardware and software issues on computers, ensuring optimal performance and user satisfaction.</p>
+          </li>
+          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="600">
+            <p>Assisted customers with inquiries related to resume encoding, document printing, photocopying, and tarpaulin design.</p>
+          </li>
+          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="800">
+            <p>Provided comprehensive support for various printing services and related tasks.</p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="list-disc text-left mx-auto max-w-2xl text-gray-700">
+          <p class="text-2xl font-bold" data-aos="fade-up" data-aos-duration="200">AMERTRON INCORPORATED</p>
+          <p class="text-sm mb-4" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">Process Engineer (INTERN, 2023)</p>
+          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="400">
+            <p>Collecting data analysis from products with defects and are good for production.</p>
+          </li>
+          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="600">
+            <p>Creating analysis, graphs and presentation for creating new processes for more efficient production of good products.</p>
+          </li>
+          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="800">
+            <p>Presenting data collection and results to higher-ups before creating new process of production.</p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <ul class="list-disc text-left mx-auto max-w-2xl text-gray-700">
+          <p class="text-2xl font-bold" data-aos="fade-up" data-aos-duration="200">TOPSERVE SERVICE SOLUTIONS INC.</p>
+          <p class="text-sm mb-4" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">Software Developer (2024 - PRESENT)</p>
+          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="400">
+            <p>Developed and maintained high-quality software applications, ensuring they met user requirements and industry standards.</p>
+          </li>
+          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="600">
+            <p>Conducted code reviews and debugging sessions to identify and resolve issues, improving overall software performance and reliability.</p>
+          </li>
+          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="800">
+            <p>Participated in agile development practices, contributing to sprint planning and daily stand-ups to facilitate project progress.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50 px-16 text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-600 mb-8" data-aos="fade-down" data-aos-duration="200">Projects</h2>
+      <div class="grid grid-cols-1 gap-8 sm:px-1 md:px-8 lg:px-16 xl:px-[100px]">
+        <!-- Repeatable video sections -->
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="500">
+          <div class="flex items-center justify-center space-x-12">
+            <!-- Video Thumbnail 1 -->
+            <div class="flex justify-around drop-shadow-2xl relative">
+              <button class="video-thumbnail" data-video-src="Videos/vid1.mkv">
+                <img src="Photos/pic1.jpg" alt="Video 1 Thumbnail" class="rounded-lg" width="2000"/>
+              </button>
+            </div>
+            <div class="text-start">
+              <p class="text-2xl font-bold"> INVENTORY SYSTEM</p>
+              <p class="text-lg font-semibold"> Brief Description</p>
+              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="500">
+          <div class="flex items-center justify-center space-x-12">
+            <!-- Video Thumbnail 1 -->
+            <div class="flex justify-around drop-shadow-2xl relative">
+              <button class="video-thumbnail" data-video-src="Videos/vid1.mkv">
+                <img src="Photos/pic1.jpg" alt="Video 1 Thumbnail" class="rounded-lg" width="2000"/>
+              </button>
+            </div>
+            <div class="text-start">
+              <p class="text-2xl font-bold"> INVENTORY SYSTEM</p>
+              <p class="text-lg font-semibold"> Brief Description</p>
+              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="500">
+          <div class="flex items-center justify-center space-x-12">
+            <!-- Video Thumbnail 1 -->
+            <div class="flex justify-around drop-shadow-2xl relative">
+              <button class="video-thumbnail" data-video-src="Videos/vid1.mkv">
+                <img src="Photos/pic1.jpg" alt="Video 1 Thumbnail" class="rounded-lg" width="2000"/>
+              </button>
+            </div>
+            <div class="text-start">
+              <p class="text-2xl font-bold"> INVENTORY SYSTEM</p>
+              <p class="text-lg font-semibold"> Brief Description</p>
+              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="500">
+          <div class="flex items-center justify-center space-x-12">
+            <!-- Video Thumbnail 1 -->
+            <div class="flex justify-around drop-shadow-2xl relative">
+              <button class="video-thumbnail" data-video-src="Videos/vid1.mkv">
+                <img src="Photos/pic1.jpg" alt="Video 1 Thumbnail" class="rounded-lg" width="2000"/>
+              </button>
+            </div>
+            <div class="text-start">
+              <p class="text-2xl font-bold"> INVENTORY SYSTEM</p>
+              <p class="text-lg font-semibold"> Brief Description</p>
+              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="500">
+          <div class="flex items-center justify-center space-x-12">
+            <!-- Video Thumbnail 1 -->
+            <div class="flex justify-around drop-shadow-2xl relative">
+              <button class="video-thumbnail" data-video-src="Videos/vid1.mkv">
+                <img src="Photos/pic1.jpg" alt="Video 1 Thumbnail" class="rounded-lg" width="2000"/>
+              </button>
+            </div>
+            <div class="text-start">
+              <p class="text-2xl font-bold"> INVENTORY SYSTEM</p>
+              <p class="text-lg font-semibold"> Brief Description</p>
+              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Add more video sections here as needed -->
+      </div>
+    </section>
+    
+    <!-- Modal for playing video -->
+    <div id="videoModal" class="fixed inset-0 flex justify-center items-center bg-gray-900 bg-opacity-50 hidden">
+      <div class="modal-content bg-white p-1 rounded-lg relative max-w-4xl w-full">
+        <button class="close-modal absolute top-[-25px] right-[-25px] text-black font-bold text-2xl" onclick="closeModal()"><i class="fa-solid fa-circle-xmark"></i></button>
+        <div class="modal-body">
+          <video id="videoPlayer" class="w-full h-auto" controls>
+            <source id="videoSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 px-6 bg-transparent border-4 border-gray-800 h-[75vh]">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-center">
+        <!-- Left side: Contact Me -->
+        <p class="text-8xl p-6 font-bold text-gray-600 mb-6 md:mb-0" data-aos="fade-left" data-aos-duration="500">
+            Contact Me
+        </p>
+        <!-- Right side: Contact Details -->
+        <div class="flex flex-col space-y-4">
+          <div class="bg-white p-4 rounded-lg shadow-md" data-aos="fade-right" data-aos-duration="500">
+              <span class="text-gray-600 text-xl flex items-center space-x-2">
+                  <i class="fas fa-envelope"></i> 
+                  <span>johnwilnerdirecto0@gmail.com</span>
+              </span>
+          </div>
+            <div class="bg-white p-4 rounded-lg shadow-md" data-aos="fade-right" data-aos-duration="500" data-aos-delay="100">
+                <span class="text-gray-600 text-xl flex items-center space-x-2">
+                    <i class="fas fa-envelope"></i> 
+                    <span>johnwilner0@gmail.com</span>
+                </span>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">
+                <span class="text-gray-600 text-xl flex items-center space-x-2">
+                    <i class="fas fa-phone-alt"></i> 
+                    <span>0981878372</span>
+                </span>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md" data-aos="fade-right" data-aos-duration="500" data-aos-delay="300">
+                <span class="text-gray-600 text-xl flex items-center space-x-2">
+                    <i class="fas fa-phone-alt"></i> 
+                    <span>09918071256</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</div>
+
+
+  <!-- Footer -->
+  <footer class="py-2 text-center bg-black text-white">
+    <p>&copy; 2025 John Wilner Torrodo</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+
+    $(document).ready(function() {
+      AOS.init();
+      var sections = $('section');
+      var navLinks = $('nav a');
+      var sideNav = $('#sideNav a');
+  
+      $(window).on('scroll', function() {
+        var scrollPos = $(document).scrollTop();
+        sections.each(function() {
+          var sectionTop = $(this).offset().top;
+          var sectionHeight = $(this).outerHeight();
+          var sectionId = $(this).attr('id');
+          
+          if (scrollPos >= sectionTop - sectionHeight / 3) {
+            navLinks.removeClass('text-white');
+            $('nav a[href="#' + sectionId + '"]').addClass('text-white');
+          }
+        });
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      // Toggle the sidebar visibility (for mobile)
+      $("#sidebarToggle").click(function() {
+        $("#sidebar").toggleClass("hidden");
+      });
+
+      // Close the sidebar when the close button is clicked
+      $("#closeSidebar").click(function() {
+        $("#sidebar").addClass("hidden");
+      });
+    });
+  </script>
+  <script>
+$(document).ready(function() {
+  // Playlist (Add video sources here)
+  const videoPlaylist = [
+    { src: 'Videos/vid1.mkv' },
+    { src: 'Videos/vid2.mkv' },
+    // Add more videos as needed
+  ];
+
+  // Open modal when video thumbnail is clicked
+  $('.video-thumbnail').on('click', function() {
+    const videoSrc = $(this).data('video-src');
+    openModal(videoSrc);
+  });
+
+  // Open modal function
+  function openModal(videoSrc) {
+    $('#videoSource').attr('src', videoSrc); // Set the source of the video
+    $('#videoPlayer')[0].load(); // Reload the video player with the new source
+    $('#videoModal').removeClass('hidden'); // Show the modal
+  }
+
+  // Close modal function
+  function closeModal() {
+    $('#videoModal').addClass('hidden'); // Hide the modal
+    $('#videoPlayer')[0].pause(); // Pause the video
+  }
+
+  // Close the modal if user clicks outside of the modal content
+  $('#videoModal').on('click', function(event) {
+    if ($(event.target).is('#videoModal')) {
+      closeModal(); // Close the modal if the user clicks outside the modal content
+    }
+  });
+
+  // Close modal when close button is clicked
+  $('.close-modal').on('click', closeModal);
+});
+  </script>
+  <script>
+    $(document).ready(function() {
+      // Toggle social media icons on arrow click
+      $('#arrowIcon').click(function() {
+        // Slide in/out the social media icons
+        $('#socialMediaIcons').stop(true, true).slideToggle(500);
+        
+        
+        const arrowIcon = $('#arrowIcon');
+        if (arrowIcon.hasClass('fa-eye-slash')) {
+          arrowIcon.removeClass('fa-eye-slash text-gray-600').addClass('fa-eye text-white');
+        } else {
+          arrowIcon.removeClass('fa-eye text-white').addClass('fa-eye-slash text-gray-600');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
