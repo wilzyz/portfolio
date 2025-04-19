@@ -2,17 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=2.0">
   <title>John Wilner | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <style>
-  html {
+html, body {
+  width: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
+[data-aos="slide-left"]{
+  transform: translate3d(500%, 0, 0);
+}
+body{
+  background-image: url('Photos/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
   .social-media-icons {
       display: none;
       transition: transform 0.5s ease;
@@ -21,102 +30,89 @@
 </head>
 <body class="font-sans bg-transparent text-gray-900">
   <!-- Left Sticky Navbar -->
-  <nav id="navbar" class="fixed top-0 left-0 h-full sm:w-[6%] md:w-[6%] lg:w-[6%] bg-black text-white flex flex-col items-center z-50 py-8" data-aos="slide-right" data-aos-duration="500">
+  <nav id="navbar" class="fixed top-0 left-0 h-full w-[70px] sm:w-[80px] md:w-[90px] lg:w-[80px] xl:w-[7%] 2xl:w-[150px] bg-transparent text-white flex flex-col items-center z-50 py-8" data-aos="slide-right" data-aos-duration="500">
     <!-- Navbar Brand -->
-    <div class="text-2xl font-semibold text-center mb-8" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="300">
-      <a href="/" class="text-white hover:text-white text-gray-600 transition-colors"><img src="Photos/navbar-brand.png" width="50" alt=""></a>
+    <div class="font-semibold text-center 2xl:mb-[60px] xl:mb-[20px] lg:mb-[30px] md:mb-[40px] sm:mb-[80px] mb-[50px]" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="300">
+      <a href="/" class="text-white hover:text-white text-gray-600 transition-colors"><img src="Photos/navbar-brand.png" class="w-[60px] 2xl:w-[100px] xl:w-[80px] lg:w-[60px] md:w-[50px] sm:w-[60px]" alt=""></a>
     </div>
   
     <!-- Navbar Links with Tooltips -->
     <div class="flex flex-col items-center pt-8">
       <!-- About Tooltip -->
-      <div class="group relative mb-6" data-aos="fade-down" data-aos-delay="800" data-aos-duration="100">
-        <a href="#about" class="text-2xl hover:text-white text-gray-600 text-gray-600 transition-colors">
+      <div class="group relative 2xl:mb-[40px] xl:mb-[35px] lg:mb-[30px] md:mb-[25px] sm:mb-[40px] mb-[40px]" data-aos="fade-down" data-aos-delay="800" data-aos-duration="100">
+        <a href="#about" class="2xl:text-5xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-3xl text-4xl hover:text-white text-gray-600 text-gray-600 transition-colors">
           <i class="fa-solid fa-address-card"></i>
         </a>
-        <span class="absolute translate-x-[25%] opacity-0 group-hover:opacity-100 text-sm text-white bg-black py-1 px-2 rounded transition-opacity z-10 transition-all duration-500 ease-in-out">About_Me</span>
+        <span class="2xl:text-3xl absolute translate-x-[25%] opacity-0 group-hover:opacity-100 text-white bg-black py-1 px-2 rounded transition-opacity z-10 transition-all duration-500 ease-in-out">About_Me</span>
       </div>
   
       <!-- Skills Tooltip -->
-      <div class="group relative mb-6" data-aos="fade-down" data-aos-delay="900" data-aos-duration="100">
-        <a href="#skills" class="text-2xl hover:text-white text-gray-600 transition-colors">
+      <div class="group relative 2xl:mb-[40px] xl:mb-[35px] lg:mb-[30px] md:mb-[25px] sm:mb-[40px] mb-[40px]" data-aos="fade-down" data-aos-delay="900" data-aos-duration="100">
+        <a href="#skills" class="2xl:text-5xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-3xl text-4xl hover:text-white text-gray-600 transition-colors">
           <i class="fa-solid fa-gears"></i>
         </a>
-        <span class="absolute translate-x-[40%] opacity-0 group-hover:opacity-100 text-sm text-white bg-black py-1 px-2 rounded transition-opacity transition-all duration-500 ease-in-out">Skills</span>
+        <span class="2xl:text-3xl absolute translate-x-[40%] opacity-0 group-hover:opacity-100 text-white bg-black py-1 px-2 rounded transition-opacity transition-all duration-500 ease-in-out">Skills</span>
       </div>
   
       <!-- Experience Tooltip -->
-      <div class="group relative mb-6" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="100">
-        <a href="#experiences" class="text-2xl hover:text-white text-gray-600 transition-colors">
+      <div class="group relative 2xl:mb-[40px] xl:mb-[35px] lg:mb-[30px] md:mb-[25px] sm:mb-[40px] mb-[40px]" data-aos="fade-down" data-aos-delay="1000" data-aos-duration="100">
+        <a href="#experiences" class="2xl:text-5xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-3xl text-4xl hover:text-white text-gray-600 transition-colors">
           <i class="fa-solid fa-clipboard-list"></i>
         </a>
-        <span class="absolute translate-x-[25%] opacity-0 group-hover:opacity-100 text-sm text-white bg-black py-1 px-2">Experience</span>
+        <span class="2xl:text-3xl absolute translate-x-[25%] opacity-0 group-hover:opacity-100 text-white bg-black py-1 px-2">Experience</span>
       </div>
   
       <!-- Projects Tooltip -->
-      <div class="group relative mb-6" data-aos="fade-down" data-aos-delay="1100" data-aos-duration="100">
-        <a href="#projects" class="text-2xl hover:text-white text-gray-600 transition-colors">
+      <div class="group relative 2xl:mb-[40px] xl:mb-[35px] lg:mb-[30px] md:mb-[25px] sm:mb-[40px] mb-[40px]" data-aos="fade-down" data-aos-delay="1100" data-aos-duration="100">
+        <a href="#projects" class="2xl:text-5xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-3xl text-4xl hover:text-white text-gray-600 transition-colors">
           <i class="fa-solid fa-laptop-code"></i>
         </a>
-        <span class="absolute translate-x-[25%] opacity-0 group-hover:opacity-100 text-sm text-white bg-black py-1 px-2 rounded transition-opacity transition-all duration-500 ease-in-out">Projects</span>
+        <span class="2xl:text-3xl absolute translate-x-[25%] lg:text-4xl opacity-0 group-hover:opacity-100 text-white bg-black py-1 px-2 rounded transition-opacity transition-all duration-500 ease-in-out">Projects</span>
       </div>
   
       <!-- Contact Tooltip -->
-      <div class="group relative mb-6" data-aos="fade-down" data-aos-delay="1200" data-aos-duration="200">
-        <a href="#contact" class="text-2xl hover:text-white text-gray-600 transition-colors">
+      <div class="group relative 2xl:mb-[40px] xl:mb-[35px] lg:mb-[30px] md:mb-[25px] sm:mb-[40px] mb-[40px]" data-aos="fade-down" data-aos-delay="1200" data-aos-duration="200">
+        <a href="#contact" class="2xl:text-5xl xl:text-5xl lg:text-4xl md:text-4xl sm:text-3xl text-4xl hover:text-white text-gray-600 transition-colors">
           <i class="fa-solid fa-envelope-open-text"></i>
         </a>
-        <span class="absolute translate-x-[35%] opacity-0 group-hover:opacity-100 text-sm text-white bg-black py-1 px-2 rounded transition-opacity transition-all duration-500 ease-in-out">Contact</span>
+        <span class="2xl:text-3xl absolute translate-x-[35%] opacity-0 group-hover:opacity-100 text-white bg-black py-1 px-2 rounded transition-opacity transition-all duration-500 ease-in-out">Contact</span>
       </div>
     </div>
-  
-    <!-- Social Media Icons (Initially Hidden) -->
-    <div id="socialMediaIcons" class="social-media-icons hidden absolute bottom-2 left-16 bg-black rounded px-4 py-3 space-y-3 flex flex-col items-center">
-      <a href="#" class="text-gray-600 hover:text-white text-2xl"><i class="fa-brands fa-facebook"></i></a>
-      <a href="#" class="text-gray-600 hover:text-white text-2xl"><i class="fa-brands fa-facebook-messenger"></i></a>
-      <a href="#" class="text-gray-600 hover:text-white text-2xl"><i class="fa-brands fa-viber"></i></a>
-      <a href="#" class="text-gray-600 hover:text-white text-2xl"><i class="fa-brands fa-telegram"></i></a>
-      <a href="#" class="text-gray-600 hover:text-white text-2xl"><i class="fab fa-linkedin"></i></a>
-    </div>
-  
-    <!-- Arrow Icon to Toggle Social Media Visibility -->
-    <button id="arrowContainer" class="absolute bottom-4 left-0 right-0 text-center" title="Show Social Media">
-      <i id="arrowIcon" class="fa-solid fa-eye-slash text-lg text-gray-600 cursor-pointer hover:text-white"></i>
-    </button>
   </nav>
-<div class="pl-8">
+
+<div class="sm:pl-[10px] md:pl-[20px] lg:pl-[30px] xl:pl-[50px] 2xl:pl-[50px] pl-7 mt-10">
 <!-- Main Content (Rest of the page) -->
-<section class="hero text-white h-screen flex items-center justify-center">
-  <div class="flex items-center justify-center space-x-12 sm:px-4 md:px-8 lg:px-16 xl:px-[200px]">
+<section class="flex lg:items-center lg:h-full xl:h-full 2xl:items-center xl:items-center justify-center sm:px-7 sm:pt-[50px] md:pt-[50px] lg:pt-[40px] 2xl:pt-[100px] pt-5">
+  <div class="sm:px-4 xl:flex lg:flex pr-4 items-center justify-center space-x-10 md:px-8 lg:pl-[100px] xl:px-[100px]">
     <!-- Image with Circle Effect -->
     <div class="flex justify-center drop-shadow-2xl relative">
-      <img src="Photos/pic1.jpg" alt="Wilner" class="rounded-full border-[15px] border-gray-300" data-aos="zoom-in" data-aos-duration="500" width="2500" height="300">
+      <img src="Photos/pic1.jpg" alt="Wilner" class="rounded-full border-[15px] sm:w-[50%] md:w-[400px] lg:w-[2000px] xl:w-[3000px] 2xl:w-[5000px] w-[300px] border-gray-300" data-aos="zoom-in" data-aos-duration="500">
     </div>
     <!-- Text -->
-    <div class="text-start">
-      <p class="text-[5vw] font-bold mb-[-20px] text-gray-800" data-aos="fade-left" data-aos-duration="500">Greetings!</p>
-      <p class="text-[3vw] font-bold mb-2 text-gray-800" data-aos="fade-left" data-aos-duration="500" data-aos-delay="400">you can call me Wilner</p>
-      <p class="sm:text-[1.5vw] text-gray-500 text-justify" data-aos="fade-left" data-aos-duration="500" data-aos-delay="600">A passionate full-stack developer, constantly learning and exploring new technologies to create innovative, user-friendly websites. Focused on building solutions that not only meet but exceed clients' expectations, ensuring seamless and engaging online experiences. Staying up-to-date with industry trends, striving to consistently produce high-quality work that aligns with both user needs and business objectives.</p>
+    <div class="text-start space-y-4">
+      <p class="text-white text-5xl sm:text-[50px] md:text-[60px] lg:text-[70px] xl:text-[100px] 2xl:text-[120px] sm:text-left md:text-left lg:text-left xl:text-left 2xl:text-left font-bold mb-120px]" data-aos="slide-left" data-aos-duration="500">Greetings!</p>
+      <p class=" text-right text-3xl sm:text-[40px] md:text-[50px] text-gray-200 lg:text-[45px] xl:text-[50px] 2xl:text-[70px] sm:text-right md:text-right lg:text-left xl:text-left 2xl:text-left sm:text-center font-bold mb-2" data-aos="slide-left" data-aos-duration="500" data-aos-delay="400">you can call me Wilner</p>
+      <p class="sm:text-[25px] text-2xl lg:text-[20px] xl:text-[25px] 2xl:text-[35px] md:text-[30px] text-gray-500 text-justify" data-aos="slide-left" data-aos-duration="500" data-aos-delay="600">A passionate full-stack developer, constantly learning and exploring new technologies to create innovative, user-friendly websites. Focused on building solutions that not only meet but exceed clients' expectations, ensuring seamless and engaging online experiences. Staying up-to-date with industry trends, striving to consistently produce high-quality work that aligns with both user needs and business objectives.</p>
     </div>
   </div>
 </section>
 
   <!-- About Section -->
-  <section id="about" class="py-16 px-6 text-center bg-gray-200">
-    <div class="flex items-center justify-center space-x-12 sm:px-6 md:px-8 lg:px-16 xl:px-[200px]">
+  <section id="about" class="items-center flex py-9 xl:px-7 sm:px-7 text-center bg-transparent 2xl:h-full xl:h-full xl:pr-[50px] lg:h-full" data-aos="slide-left" data-aos-duration="200">
+    <div class="2xl:flex 2xl:items-center justify-center space-x-12 xl:space-y-10 2xl:px-[150px] lg:px-[60px]">
       <!-- Image with Circle Effect -->
-      <div class="flex justify-center drop-shadow-2xl relative" data-aos="fade-right" data-aos-duration="500">
-        <p class="text-[6vw] text-end font-bold">About Me</p>
+      <div class="flex justify-center drop-shadow-2xl relative" data-aos="slide-left" data-aos-duration="1000">
+        <p class="2xl:text-[150px] 2xl:text-end text-white font-bold xl:text-[70px] lg:text-[50px] md:text-[50px] sm:text-[50px] text-4xl">About Me</p>
       </div>
       <!-- Text -->
-      <div class="text-start" data-aos="fade-left" data-aos-duration="500">
-        <p class="text-[1.2vw] text-justify text-gray-600 mb-4">
+      <div class="text-start pr-5" data-aos="slide-left" data-aos-duration="1000">
+        <p class="2xl:text-[30px] xl:text-[25px] lg:text-[20px] md:text-[25px] sm:text-[22px] text-justify text-gray-500 mb-4 text-xl">
           Driven by a deep passion for web development, I am a self-taught developer with a proven track record of delivering high-quality websites. I have successfully completed freelance projects for small businesses, honing my skills in HTML, CSS, JavaScript, and PHP, while utilizing MySQL for backend development. One of my key projects involved building a dynamic e-commerce platform for a small business, where I focused on delivering an intuitive user experience and seamless functionality. My commitment to continuous learning and passion for coding allows me to approach every project with creativity and precision.
         </p>
-        <p class="text-[1.2vw] text-justify text-gray-600 mb-4">
+        <p class="2xl:text-[30px] xl:text-[25px] lg:text-[20px] md:text-[25px] sm:text-[22px] text-justify text-gray-500 mb-4 text-xl">
           I've always been fascinated by technology and how it shapes the world. Since I was a child, I dreamed of being a developer, but I didn't know what kind of developer. As I grew older, I decided to become a web developer because it allows me to create websites from the comfort of my home. It also lets me be more creative, both in designing and building interactions on the front-end and back-end.
         </p>
-        <p class="text-[1.2vw] text-justify text-gray-600 mb-4">
+        <p class="2xl:text-[30px] xl:text-[25px] lg:text-[20px] text-justify md:text-[25px] sm:text-[22px] text-gray-500 mb-4 text-xl">
           Every project given to me fuels my passion for exploring new methods and programming languages to grow further in web development. For me, every challenge in web development helps me grow and improve my skills.
         </p>
       </div>
@@ -124,170 +120,186 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-16 bg-gray-50 px-16 text-">
-    <h2 class="text-3xl sm:text-4xl text-center font-bold text-gray-600 mb-8" data-aos="fade-down" data-aos-duration="500">Skills</h2>
-    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:px-1 md:px-8 lg:px-16 xl:px-[200px]">
-      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700">
-        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="600">HTML, CSS & JavaScript</h4>
-        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="600">Experienced in front-end web development using HTML, CSS, and JavaScript.</p>
+  <section id="skills" class="flex px-6 pl-16 bg-transparent 2xl:px-16 xl:px-16 lg:px-16 md:px-16 sm:px-10 sm:pl-[80px] 2xl:h-full 2xl:items-center pb-16">
+    <div class="2xl:pl-[50px]">
+      <h2 class="2xl:text-6xl xl:text-5xl lg:text-4xl md:text-5xl text-center sm:text-[50px] font-bold text-white mb-3 text-4xl" data-aos="slide-left" data-aos-duration="500">Skills</h2>
+    <div class="grid 2xl:grid-cols-3 xl:grid-cols-2 lg:grid-cols-2 gap-8 2xl:pl-[100px]">
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="700">
+        <h4 class="2xl:text-[40px] xl:text-[35px] lg:text-[30px] md:text-[30px] sm:text-[30px] text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-delay="600">HTML, CSS & JavaScript</h4>
+        <p class="text-justify 2xl:text-[25px] xl:text-[20px] lg:text-[20px] md:text-[20px] sm:text-[20px] text-xl" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="600">Experienced in front-end web development using HTML, CSS, and JavaScript.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="200">
-        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="700">Python</h4>
-        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="700">Experienced in developing software, applications, and websites (using Flask) with Python.</p>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="700" data-aos-delay="200">
+        <h4 class="2xl:text-[40px] xl:text-[35px] lg:text-[30px] md:text-[30px] sm:text-[30px] text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="700">Python</h4>
+        <p class="text-justify 2xl:text-[25px] xl:text-[30px] lg:text-[20px] md:text-[20px] text-xl sm:text-[20px]" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="700">Experienced in developing software, applications, and websites (using Flask) with Python.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="300">
-        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="800">Bootstrap & Tailwind</h4>
-        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="800">Proficient in using Bootstrap for a more convenient CSS framework, but transitioned to Tailwind for greater flexibility in HTML design.</p>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="700" data-aos-delay="300">
+        <h4 class="2xl:text-[40px] xl:text-[35px] lg:text-[30px] md:text-[30px] sm:text-[30px] text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="800">Bootstrap & Tailwind</h4>
+        <p class="text-justify 2xl:text-[25px] xl:text-[20px] lg:text-[20px] md:text-[20px] text-xl sm:text-[20px]" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="800">Proficient in using Bootstrap for a more convenient CSS framework, but transitioned to Tailwind for greater flexibility in HTML design.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="400">
-        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="900">Problem Solving</h4>
-        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="900">Skilled in identifying and resolving complex issues by understanding client needs and applying effective solutions. Experienced in troubleshooting technical problems and optimizing processes for better results.</p>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="700" data-aos-delay="400">
+        <h4 class="2xl:text-[40px] xl:text-[35px] lg:text-[30px] md:text-[30px] sm:text-[30px] text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="900">Problem Solving</h4>
+        <p class="2xl:text-[25px] text-justify xl:text-[20px] lg:text-[20px] md:text-[20px] text-xl sm:text-[20px]" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="900">Skilled in identifying and resolving complex issues by understanding client needs and applying effective solutions. Experienced in troubleshooting technical problems and optimizing processes for better results.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="500">
-        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="1000">Time Management & Multitasking</h4>
-        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="1000">Experienced in managing multiple projects simultaneously, with strong time management and multitasking skills to ensure timely project completion.</p>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="700" data-aos-delay="500">
+        <h4 class="2xl:text-[40px] xl:text-[35px] lg:text-[30px] md:text-[30px] sm:text-[30px] text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="1000">Time Management & Multitasking</h4>
+        <p class="2xl:text-[25px] text-justify xl:text-[20px] lg:text-[20px] md:text-[20px] text-xl sm:text-[20px]" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="1000">Experienced in managing multiple projects simultaneously, with strong time management and multitasking skills to ensure timely project completion.</p>
       </div>
-      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="700" data-aos-delay="600">
-        <h4 class="text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="1100">PHP & MySQL</h4>
-        <p class="text-justify" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="1100">Extensive experience in backend development with PHP, paired with MySQL for database management.</p>
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="700" data-aos-delay="600">
+        <h4 class="2xl:text-[40px] xl:text-[35px] lg:text-[30px] md:text-[30px] sm:text-[30px] text-2xl font-semibold mb-3 text-center" data-aos="zoom-out" data-aos-duration="700" data-aos-delay="1100">PHP & MySQL</h4>
+        <p class="2xl:text-[25px] text-justify xl:text-[20px lg:text-[20px] md:text-[20px] text-xl sm:text-[20px]" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="1100">Extensive experience in backend development with PHP, paired with MySQL for database management.</p>
       </div>
     </div>
+    
+  </div>
   </section>
   
 
   <!-- Experience Section -->
-  <section id="experiences" class="py-16 px-6 text-center bg-gray-200 lg:h-dvh md:h-[150vh] sm:h-[300vh]">
-    <h2 class="text-3xl sm:text-4xl font-bold text-gray-600 mb-8" data-aos="fade-down">Experience</h2>
-    <div class="flex items-center justify-center space-x-12 sm:px-4 md:px-8 lg:px-16 xl:px-[100px]">
-      <div>
-        <ul class="list-disc text-left mx-auto max-w-2xl text-gray-700">
-          <p class="text-2xl font-bold" data-aos="fade-up" data-aos-duration="200">PSALMS PRINTING SHOP</p>
-          <p class="text-sm mb-4" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">Computer Store attendant (2019-2023)</p>
-          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="400">
+  <section id="experiences" class="flex 2xl:py-16 pr-5 xl:py-16 xl:px-6 sm:px-7 2xl:px-6 md:px-[30px] md:pl-[50px] text-center bg-transparent 2xl:h-full 2xl:items-center md:justify-center">
+    <div class="2xl:pl-[100px]">
+    <h2 class="2xl:text-6xl xl:text-5xl font-bold text-white pb-[10px] lg:text-4xl md:text-5xl md:pb-[30px] sm:text-[50px] sm:mb-[20px] sm:pl-10 text-4xl" data-aos="slide-left" data-aos-duration="200">Experience</h2>
+    <div class="grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 md:space-y-10 lg:space-y-9 sm:space-y-10 space-y-10 items-center justify-center space-x-12 sm:px-4 md:px-8 lg:px-16 xl:px-[100px]">
+      <div class="flex items-center">
+        <ul class="list-disc text-left md:pl-[30px] pl-10 mx-auto max-w-2xl text-gray-300 sm:pl-[40px]" data-aos="slide-left" data-aos-duration="200" data-aos-delay="200">
+          <p class="2xl:text-[40px] xl:text-[30px] lg:text-[25px] md:text-[30px] sm:text-[30px] text-3xl font-bold text-center">PSALMS PRINTING SHOP</p>
+          <p class="2xl:text-[25px] xl:text-[20px] lg:text-[18px] md:text-[20px] sm:text-[20px] text-xl mb-4 text-center">Computer Store attendant (2019-2023)</p>
+          <li class="2xl:text-[30px] xl:text-[22px] lg:text-[20px] md:text-[22px] sm:text-[20px] text-xl  ml-5 text-justify">
             <p>Diagnosed and resolved hardware and software issues on computers, ensuring optimal performance and user satisfaction.</p>
           </li>
-          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="600">
+          <li class="2xl:text-[30px] xl:text-[25px] lg:text-[20px] md:text-[22px] sm:text-[20px] text-xl ml-5 text-justify">
             <p>Assisted customers with inquiries related to resume encoding, document printing, photocopying, and tarpaulin design.</p>
           </li>
-          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="800">
+          <li class="2xl:text-[30px] xl:text-[25px] lg:text-[20px] md:text-[22px] sm:text-[20px] text-xl ml-5 text-justify">
             <p>Provided comprehensive support for various printing services and related tasks.</p>
           </li>
         </ul>
       </div>
-      <div>
-        <ul class="list-disc text-left mx-auto max-w-2xl text-gray-700">
-          <p class="text-2xl font-bold" data-aos="fade-up" data-aos-duration="200">AMERTRON INCORPORATED</p>
-          <p class="text-sm mb-4" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">Process Engineer (INTERN, 2023)</p>
-          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="400">
+      <div class="flex items-center">
+        <ul class="list-disc mx-auto max-w-2xl text-gray-300" data-aos="slide-left" data-aos-duration="200" data-aos-delay="200">
+          <p class="2xl:text-[40px] xl:text-[30px] lg:text-[25px] md:text-[30px] sm:text-[30px] text-3xl font-bold text-center">AMERTRON INCORPORATED</p>
+          <p class="2xl:text-[25px] xl:text-[20px] lg:text-[18px] md:text-[20px] sm:text-[20px] text-xl mb-4 text-center">Process Engineer (INTERN, 2023)</p>
+          <li class="2xl:text-[30px] xl:text-[22px] lg:text-[20px] md:text-[22px] sm:text-[20px] text-xl ml-5 text-justify">
             <p>Collecting data analysis from products with defects and are good for production.</p>
           </li>
-          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="600">
+          <li class="2xl:text-[30px] xl:text-[22px] lg:text-[20px] md:text-[22px] sm:text-[20px] text-xl ml-5 text-justify">
             <p>Creating analysis, graphs and presentation for creating new processes for more efficient production of good products.</p>
           </li>
-          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="800">
+          <li class="2xl:text-[30px] xl:text-[22px] lg:text-[20px] md:text-[22px] sm:text-[20px] text-xl ml-5 text-justify">
             <p>Presenting data collection and results to higher-ups before creating new process of production.</p>
           </li>
         </ul>
       </div>
-      <div>
-        <ul class="list-disc text-left mx-auto max-w-2xl text-gray-700">
-          <p class="text-2xl font-bold" data-aos="fade-up" data-aos-duration="200">TOPSERVE SERVICE SOLUTIONS INC.</p>
-          <p class="text-sm mb-4" data-aos="fade-up" data-aos-duration="200" data-aos-delay="200">Software Developer (2024 - PRESENT)</p>
-          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="400">
+      <div class="flex items-center lg:col-span-2 lg:justify-center">
+        <ul class="list-disc mx-auto max-w-2xl text-gray-300 text-center lg:w-1/2" data-aos="slide-left" data-aos-duration="200" data-aos-delay="400">
+          <p class="2xl:text-[40px] xl:text-[30px] lg:text-[25px] md:text-[30px] sm:text-[30px] text-3xl font-bold text-center">TOPSERVE SERVICE SOLUTIONS INC.</p>
+          <p class="2xl:text-[25px] xl:text-[20px] lg:text-[18px] md:text-[20px] sm:text-[20px] text-xl mb-4 text-center">Software Developer (2024 - PRESENT)</p>
+          <li class="2xl:text-[30px] xl:text-[22px] lg:text-[20px] md:text-[22px] sm:text-[20px] text-xl ml-5 text-justify">
             <p>Developed and maintained high-quality software applications, ensuring they met user requirements and industry standards.</p>
           </li>
-          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="600">
+          <li class="2xl:text-[30px] xl:text-[22px] lg:text-[20px] md:text-[22px] sm:text-[20px] text-xl ml-5 text-justify">
             <p>Conducted code reviews and debugging sessions to identify and resolve issues, improving overall software performance and reliability.</p>
           </li>
-          <li class="ml-5 text-justify" data-aos="fade-up" data-aos-duration="200" data-aos-delay="800">
+          <li class="2xl:text-[30px] xl:text-[22px] lg:text-[20px] md:text-[22px] sm:text-[20px] text-xl ml-5 text-justify">
             <p>Participated in agile development practices, contributing to sprint planning and daily stand-ups to facilitate project progress.</p>
           </li>
         </ul>
       </div>
+      
     </div>
+  </div>
   </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="py-16 bg-gray-50 px-16 text-center">
-      <h2 class="text-3xl sm:text-4xl font-bold text-gray-600 mb-8" data-aos="fade-down" data-aos-duration="200">Projects</h2>
-      <div class="grid grid-cols-1 gap-8 sm:px-1 md:px-8 lg:px-16 xl:px-[100px]">
+    <section id="projects" class="py-16 bg-transparent 2xl:px-16 sm:px-7 xl:px-16 lg:pl-[50px] text-center 2xl:pl-[100px] md:pl-[50px] sm:pl-[90px] pl-16 pr-6">
+      <h2 class="2xl:text-6xl sm:text-5xl font-bold text-white mb-8 text-4xl" data-aos="slide-left" data-aos-duration="200">Projects</h2>
+      <div class="grid 2xl:grid-cols-1 xl:grid-cols-1 lg:grid-cols-2 gap-8 sm:px-1 md:px-8 lg:px-16 xl:px-[100px]">
         <!-- Repeatable video sections -->
-        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="500">
-          <div class="flex items-center justify-center space-x-12">
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="500">
+          <div class="2xl:flex xl:flex items-center justify-center 2xl:space-x-12 xl:space-x-12 ">
             <!-- Video Thumbnail 1 -->
             <div class="flex justify-around drop-shadow-2xl relative">
-              <button class="video-thumbnail" data-video-src="Videos/vid1.mkv">
-                <img src="Photos/pic1.jpg" alt="Video 1 Thumbnail" class="rounded-lg" width="2000"/>
+              <button class="video-thumbnail" data-video-src="Videos/Inventory.mkv">
+                <img src="Photos/inventory.PNG" alt="Video 1 Thumbnail" class="rounded-lg 2xl:w-[4000px] xl:w-[2000px]"/>
               </button>
             </div>
-            <div class="text-start">
-              <p class="text-2xl font-bold"> INVENTORY SYSTEM</p>
-              <p class="text-lg font-semibold"> Brief Description</p>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="500">
-          <div class="flex items-center justify-center space-x-12">
-            <!-- Video Thumbnail 1 -->
-            <div class="flex justify-around drop-shadow-2xl relative">
-              <button class="video-thumbnail" data-video-src="Videos/vid1.mkv">
-                <img src="Photos/pic1.jpg" alt="Video 1 Thumbnail" class="rounded-lg" width="2000"/>
-              </button>
-            </div>
-            <div class="text-start">
-              <p class="text-2xl font-bold"> INVENTORY SYSTEM</p>
-              <p class="text-lg font-semibold"> Brief Description</p>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
+            <div class="2xl:text-start xl:text-start lg:text-center">
+              <p class="2xl:text-[50px] xl:text-[45px] lg:text-[25px] md:text-[40px] sm:text-[40px] text-2xl font-bold">INVENTORY SYSTEM</p>
+              <p class="2xl:text-[25px] xl:text-[16px] lg:text-[20px] md:text-[20px] sm:text-[20px] text-xl text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
             </div>
           </div>
         </div>
         
-        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="500">
-          <div class="flex items-center justify-center space-x-12">
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="500">
+          <div class="2xl:flex xl:flex items-center justify-center 2xl:space-x-12 xl:space-x-12 ">
             <!-- Video Thumbnail 1 -->
             <div class="flex justify-around drop-shadow-2xl relative">
-              <button class="video-thumbnail" data-video-src="Videos/vid1.mkv">
-                <img src="Photos/pic1.jpg" alt="Video 1 Thumbnail" class="rounded-lg" width="2000"/>
+              <button class="video-thumbnail" data-video-src="Videos/LPS.mkv">
+                <img src="Photos/lps.png" alt="Video 1 Thumbnail" class="rounded-lg 2xl:w-[4000px] xl:w-[2000px]"/>
               </button>
             </div>
-            <div class="text-start">
-              <p class="text-2xl font-bold"> INVENTORY SYSTEM</p>
-              <p class="text-lg font-semibold"> Brief Description</p>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
+            <div class="2xl:text-start xl:text-start lg:text-center">
+              <p class="2xl:text-[50px] xl:text-[45px] lg:text-[25px] md:text-[40px] sm:text-[40px] text-2xl font-bold">INVENTORY SYSTEM</p>
+              <p class="2xl:text-[25px] xl:text-[16px] lg:text-[20px] md:text-[20px] sm:text-[20px] text-xl text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
             </div>
           </div>
         </div>
         
-        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="500">
-          <div class="flex items-center justify-center space-x-12">
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="500">
+          <div class="2xl:flex xl:flex items-center justify-center 2xl:space-x-12 xl:space-x-12 ">
             <!-- Video Thumbnail 1 -->
             <div class="flex justify-around drop-shadow-2xl relative">
-              <button class="video-thumbnail" data-video-src="Videos/vid1.mkv">
-                <img src="Photos/pic1.jpg" alt="Video 1 Thumbnail" class="rounded-lg" width="2000"/>
+              <button class="video-thumbnail" data-video-src="Videos/Queuing.mkv">
+                <img src="Photos/queuing.PNG" alt="Video 1 Thumbnail" class="rounded-lg 2xl:w-[4000px] xl:w-[2000px]"/>
               </button>
             </div>
-            <div class="text-start">
-              <p class="text-2xl font-bold"> INVENTORY SYSTEM</p>
-              <p class="text-lg font-semibold"> Brief Description</p>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
+            <div class="2xl:text-start xl:text-start lg:text-center">
+              <p class="2xl:text-[50px] xl:text-[45px] lg:text-[25px] md:text-[40px] sm:text-[40px] text-2xl font-bold">INVENTORY SYSTEM</p>
+              <p class="2xl:text-[25px] xl:text-[16px] lg:text-[20px] md:text-[20px] sm:text-[20px] text-xl text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
             </div>
           </div>
         </div>
         
-        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="500">
-          <div class="flex items-center justify-center space-x-12">
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="500">
+          <div class="2xl:flex xl:flex items-center justify-center 2xl:space-x-12 xl:space-x-12 ">
             <!-- Video Thumbnail 1 -->
             <div class="flex justify-around drop-shadow-2xl relative">
-              <button class="video-thumbnail" data-video-src="Videos/vid1.mkv">
-                <img src="Photos/pic1.jpg" alt="Video 1 Thumbnail" class="rounded-lg" width="2000"/>
+              <button class="video-thumbnail" data-video-src="Videos/Warehouse.mkv">
+                <img src="Photos/warehouse.PNG" alt="Video 1 Thumbnail" class="rounded-lg 2xl:w-[4000px] xl:w-[2000px]"/>
               </button>
             </div>
-            <div class="text-start">
-              <p class="text-2xl font-bold"> INVENTORY SYSTEM</p>
-              <p class="text-lg font-semibold"> Brief Description</p>
-              <p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
+            <div class="2xl:text-start xl:text-start lg:text-center">
+              <p class="2xl:text-[50px] xl:text-[45px] lg:text-[25px] md:text-[40px] sm:text-[40px] text-2xl font-bold">INVENTORY SYSTEM</p>
+              <p class="2xl:text-[25px] xl:text-[16px] lg:text-[20px] md:text-[20px] sm:text-[20px] text-xl text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="500">
+          <div class="2xl:flex xl:flex items-center justify-center 2xl:space-x-12 xl:space-x-12 ">
+            <!-- Video Thumbnail 1 -->
+            <div class="flex justify-around drop-shadow-2xl relative">
+              <button class="video-thumbnail" data-video-src="Videos/Rate Sheet.mkv">
+                <img src="Photos/ratesheet.PNG" alt="Video 1 Thumbnail" class="rounded-lg 2xl:w-[4000px] xl:w-[2000px]"/>
+              </button>
+            </div>
+            <div class="2xl:text-start xl:text-start lg:text-center">
+              <p class="2xl:text-[50px] xl:text-[45px] lg:text-[25px] md:text-[40px] sm:text-[40px] text-2xl font-bold">INVENTORY SYSTEM</p>
+              <p class="2xl:text-[25px] xl:text-[16px] lg:text-[20px] md:text-[20px] sm:text-[20px] text-xl text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="slide-left" data-aos-duration="500">
+          <div class="2xl:flex xl:flex items-center justify-center 2xl:space-x-12 xl:space-x-12 ">
+            <!-- Video Thumbnail 1 -->
+            <div class="flex justify-around drop-shadow-2xl relative">
+              <button class="video-thumbnail" data-video-src="Videos/Budget Monitoring.mkv">
+                <img src="Photos/budget_monitoring.PNG" alt="Video 1 Thumbnail" class="rounded-lg 2xl:w-[4000px] xl:w-[2000px]"/>
+              </button>
+            </div>
+            <div class="2xl:text-start xl:text-start lg:text-center">
+              <p class="2xl:text-[50px] xl:text-[45px] lg:text-[25px] md:text-[40px] sm:text-[40px] text-2xl font-bold">INVENTORY SYSTEM</p>
+              <p class="2xl:text-[25px] xl:text-[16px] lg:text-[20px] md:text-[20px] sm:text-[20px] text-xl text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan quam finibus pharetra venenatis. Pellentesque mauris mi, fringilla sed risus eu, fringilla facilisis ipsum. Cras tincidunt venenatis arcu eu pellentesque. Curabitur vitae enim mi. In a sem mollis, pretium augue quis, rutrum diam. Morbi ultricies semper purus. Nam scelerisque tortor vel orci dignissim, a ornare nibh ornare. Integer ut dui vel urna sodales consequat. Morbi turpis purus, commodo eget volutpat vel, ornare at nunc. Integer tempus rhoncus urna, sit amet consequat ipsum rhoncus vel. Phasellus vehicula augue vel consectetur commodo.</p>
             </div>
           </div>
         </div>
@@ -296,7 +308,7 @@
     </section>
     
     <!-- Modal for playing video -->
-    <div id="videoModal" class="fixed inset-0 flex justify-center items-center bg-gray-900 bg-opacity-50 hidden">
+    <div id="videoModal" class="fixed inset-0 flex z-[999] justify-center items-center bg-gray-900 bg-opacity-50 hidden">
       <div class="modal-content bg-white p-1 rounded-lg relative max-w-4xl w-full">
         <button class="close-modal absolute top-[-25px] right-[-25px] text-black font-bold text-2xl" onclick="closeModal()"><i class="fa-solid fa-circle-xmark"></i></button>
         <div class="modal-body">
@@ -309,55 +321,96 @@
     </div>
   
   <!-- Contact Section -->
-  <section id="contact" class="py-16 px-6 bg-transparent border-4 border-gray-800 h-[75vh]">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-center">
-        <!-- Left side: Contact Me -->
-        <p class="text-8xl p-6 font-bold text-gray-600 mb-6 md:mb-0" data-aos="fade-left" data-aos-duration="500">
-            Contact Me
+  <section id="contact" class="bg-transparent flex items-start justify-center sm:px-7 2xl:pt-[100px] h-[80vh] pl-5 2xl:h-[90vh] 2xl:pl-[90px] xl:h-[90vh] xl:pt-[50px] lg:h-[90vh] lg:pl-[80px] md:h-[100vh] md:pl-[50vh] md:px-[10px] sm:h-[50vh] sm:px-[30px] sm:pl-[50px]">
+    <div class="max-w-6xl mx-auto flex flex-col gap-16">
+      <!-- Left side: Contact Me -->
+      <div class="flex items-center justify-center text-center">
+        <p class="text-6xl 2xl:text-[150px] font-bold text-white text-center" data-aos="slide-left" data-aos-duration="500">
+          Contact Me
         </p>
-        <!-- Right side: Contact Details -->
-        <div class="flex flex-col space-y-4">
-          <div class="bg-white p-4 rounded-lg shadow-md" data-aos="fade-right" data-aos-duration="500">
-              <span class="text-gray-600 text-xl flex items-center space-x-2">
-                  <i class="fas fa-envelope"></i> 
-                  <span>johnwilnerdirecto0@gmail.com</span>
-              </span>
-          </div>
-            <div class="bg-white p-4 rounded-lg shadow-md" data-aos="fade-right" data-aos-duration="500" data-aos-delay="100">
-                <span class="text-gray-600 text-xl flex items-center space-x-2">
-                    <i class="fas fa-envelope"></i> 
-                    <span>johnwilner0@gmail.com</span>
-                </span>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow-md" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">
-                <span class="text-gray-600 text-xl flex items-center space-x-2">
-                    <i class="fas fa-phone-alt"></i> 
-                    <span>0981878372</span>
-                </span>
-            </div>
-            <div class="bg-white p-4 rounded-lg shadow-md" data-aos="fade-right" data-aos-duration="500" data-aos-delay="300">
-                <span class="text-gray-600 text-xl flex items-center space-x-2">
-                    <i class="fas fa-phone-alt"></i> 
-                    <span>09918071256</span>
-                </span>
-            </div>
-        </div>
+      </div>
+  
+      <!-- Right side: Contact Details -->
+      <div class="flex flex-wrap text-5xl gap-[60px] justify-center 2xl:justify-center text-gray-600 2xl:text-[100px] xl:text-[60px] xl:pl-[50px] lg:text-[50px] md:text-[40px] sm:text-[30px]">
+        <!-- Email -->
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=johnwilner0@example.com"
+           target="_blank"
+           class="hover:text-white transition duration-300 bg-gray-100 hover:bg-gray-700 flex items-center p-9 rounded-2xl" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="500">
+          <i class="fas fa-envelope"></i>
+        </a>
+      
+        <!-- Phone -->
+        <button onclick="copyPhone()" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="600"
+                class="hover:text-blue-600 transition duration-300 bg-gray-100 hover:bg-gray-700 flex items-center p-9 rounded-2xl focus:outline-none rounded-xl">
+          <i class="fas fa-phone"></i>
+        </button>
+      
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/john-wilner-directo-6a0b45282" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="700"
+           target="_blank"
+           class="hover:text-blue-600 transition duration-300 bg-gray-100 hover:bg-gray-700 flex items-center p-9 2xl:rounded-2xl rounded-xl">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      
+      
+        <!-- Messenger -->
+        <a href="https://m.me/john.wilner.directo" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="900"
+           target="_blank"
+           class="hover:text-blue-800 transition duration-300 bg-gray-100 hover:bg-gray-700 flex items-center p-9 2xl:rounded-2xl rounded-xl">
+          <i class="fab fa-facebook-messenger"></i>
+        </a>
+
+        <!--Telegram-->
+        <a href="https://t.me/jhanyhan" target="_blank" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="1000">
+          <button class="hover:text-blue-600 transition duration-300 bg-gray-100 hover:bg-gray-700 flex items-center p-9 2xl:rounded-2xl rounded-xl">
+            <i class="fab fa-telegram"></i>
+          </button>
+        </a>
+
+        <!--Viber-->
+        <a href="viber://chat?number=+639918071256" data-aos="zoom-out" data-aos-duration="500" data-aos-delay="1100">
+          <button class="hover:text-purple-600 transition duration-300 bg-gray-100 hover:bg-gray-700 flex items-center p-9 2xl:rounded-2xl rounded-xl">
+            <i class="fab fa-viber"></i>
+          </button>
+        </a>        
+        
+      </div>
+      
+      <!-- Toast Message -->
+      <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-black text-white 2xl:text-3xl px-4 py-2 rounded-lg shadow-md hidden transition-opacity duration-300">
+        Phone number copied!
+      </div>
     </div>
-</section>
-
-
+    </section>
 </div>
 
 
   <!-- Footer -->
-  <footer class="py-2 text-center bg-black text-white">
+  <footer class="py-2 text-center bg-black text-white 2xl:text-[20px]">
     <p>&copy; 2025 John Wilner Torrodo</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
+    function copyPhone() {
+      const phoneNumber = "+639981878372";
+      navigator.clipboard.writeText(phoneNumber).then(() => {
+        const toast = document.getElementById("toast");
+        toast.classList.remove("hidden");
+        toast.classList.add("block");
+        setTimeout(() => {
+          toast.classList.add("hidden");
+        }, 2000);
+      });
+    }
+  </script>
+  <script>
 
+AOS.init({
+    once: false, // if false, animation will happen every time you scroll
+    offset: 200, // trigger point from the top
+    duration: 1000, // default duration
+  });
     $(document).ready(function() {
-      AOS.init();
       var sections = $('section');
       var navLinks = $('nav a');
       var sideNav = $('#sideNav a');
@@ -395,8 +448,12 @@
 $(document).ready(function() {
   // Playlist (Add video sources here)
   const videoPlaylist = [
-    { src: 'Videos/vid1.mkv' },
-    { src: 'Videos/vid2.mkv' },
+    { src: 'Videos/Budget Monitoring.mkv' },
+    { src: 'Videos/Inventory.mkv' },
+    { src: 'Videos/LPS.mkv' },
+    { src: 'Videos/Queuing.mkv' },
+    { src: 'Videos/Rate Sheet.mkv' },
+    { src: 'Videos/Warehouse.mkv' }
     // Add more videos as needed
   ];
 
@@ -408,10 +465,13 @@ $(document).ready(function() {
 
   // Open modal function
   function openModal(videoSrc) {
-    $('#videoSource').attr('src', videoSrc); // Set the source of the video
-    $('#videoPlayer')[0].load(); // Reload the video player with the new source
-    $('#videoModal').removeClass('hidden'); // Show the modal
-  }
+  $('#videoSource').attr('src', videoSrc);
+  const player = $('#videoPlayer')[0];
+  player.load();
+  player.play(); // <--- Force play to trigger rendering
+  $('#videoModal').removeClass('hidden');
+}
+
 
   // Close modal function
   function closeModal() {
@@ -447,5 +507,22 @@ $(document).ready(function() {
       });
     });
   </script>
+  <script>
+    let prevScroll = window.scrollY;
+    window.addEventListener("scroll", function () {
+      const currentScroll = window.scrollY;
+  
+      if (currentScroll > prevScroll) {
+        // scrolling down
+        AOS.refresh();
+      } else {
+        // scrolling up
+        AOS.refresh();
+      }
+  
+      prevScroll = currentScroll;
+    });
+  </script>
+  
 </body>
 </html>
